@@ -19,6 +19,14 @@ export class HomePage {
   abneg = 0
   opos = 0
   oneg = 0
+  apos_atual = 0
+  aneg_atual = 0
+  bpos_atual = 0
+  bneg_atual = 0
+  abpos_atual = 0
+  abneg_atual = 0
+  opos_atual = 0
+  oneg_atual = 0
 
   doar(formu: { value: { tpSangue: string; qtde: any; }; }) {
     const tpSangue = formu.value.tpSangue.toUpperCase();
@@ -52,6 +60,20 @@ export class HomePage {
       default:
         break;
     }
+  
+  }
+
+  estoque() {
+
+    this.apos_atual = this.apos;
+    this.aneg_atual = this.aneg;
+    this.bpos_atual = this.bpos;
+    this.bneg_atual = this.bneg;
+    this.abpos_atual = this.abpos;
+    this.abneg_atual = this.abneg;
+    this.opos_atual = this.opos;
+    this.oneg_atual = this.oneg;
 
   }
+
 }
