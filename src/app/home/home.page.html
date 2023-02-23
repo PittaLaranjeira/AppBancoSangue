@@ -1,20 +1,67 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      APP - Banco de Sangue 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true">
+  <form #formulario="ngForm" class="ion-padding">
+    <br><br><br>
+    <ion-item>
+      <ion-label>Tipo Sanguíneo: </ion-label>
+      <ion-input name="tpSangue" ngModel></ion-input>
+      <br>
+      <ion-label>Quantidade: </ion-label>
+      <ion-input name="qtde" ngModel></ion-input>
+      <p>ml</p>
+    </ion-item><br><br>
+    <br>
+
+    <ion-button (click)="doar(formulario)">DOAR</ion-button>
+    <!--<ion-button (click)="estoque(formulario)">Análise Estoque</ion-button>-->
+  </form>
+  <br><br>
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col>Tipo Sanguíneo</ion-col>
+      <ion-col>Estoque</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>A+</ion-col>
+      <ion-col>{{apos}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>A-</ion-col>
+      <ion-col>{{aneg}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>B+</ion-col>
+      <ion-col>{{bpos}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>B-</ion-col>
+      <ion-col>{{bneg}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>AB+</ion-col>
+      <ion-col>{{abpos}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>AB-</ion-col>
+      <ion-col>{{abneg}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>O+</ion-col>
+      <ion-col>{{opos}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>O-</ion-col>
+      <ion-col>{{oneg}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+
 </ion-content>
