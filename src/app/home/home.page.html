@@ -9,7 +9,7 @@
 
 <ion-content [fullscreen]="true">
   <form #formulario="ngForm" class="ion-padding">
-    <br><br><br>
+    <br>
     <ion-item>
       <ion-label>Tipo Sanguíneo: </ion-label>
       <select name="tpSangue" id="tpSangue" ngModel>
@@ -26,12 +26,12 @@
       <ion-label class="ion-padding">Quantidade: </ion-label>
       <ion-input name="qtde" ngModel></ion-input>
       <p>ml</p>
-    </ion-item><br><br>
+    </ion-item><br>
     <br>
-    <ion-button (click)="doar(formulario)">DOAR</ion-button>
+    <ion-button (click)="doar(formulario); this.formulario.reset()">DOAR</ion-button>
     <ion-button (click)="estoque()">ANÁLISE ESTOQUE</ion-button>
   </form>
-  <br><br>
+  <br>
   <ion-grid class="ion-padding">
     <ion-row>
       <ion-col>Tipo Sanguíneo</ion-col>
