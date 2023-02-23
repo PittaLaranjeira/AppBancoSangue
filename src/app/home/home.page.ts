@@ -24,25 +24,33 @@ export class HomePage {
     const tpSangue = formu.value.tpSangue.toUpperCase();
     const qtde = formu.value.qtde;
 
-
-    this.qtde += parseFloat(qtde);
-
-    if (tpSangue == "A+") {
-      this.apos += parseFloat(qtde);
-    } else if (tpSangue == "A-") {
-      this.aneg += parseFloat(qtde);
-    } else if (tpSangue == "B+") {
-      this.bpos += parseFloat(qtde);
-    } else if (tpSangue == "B-") {
-      this.bneg += parseFloat(qtde);
-    } else if (tpSangue == "AB+") {
-      this.abpos += parseFloat(qtde);
-    } else if (tpSangue == "AB-") {
-      this.abneg += parseFloat(qtde);
-    } else if (tpSangue == "O+") {
-      this.opos += parseFloat(qtde);
-    } else if (tpSangue == "O-") {
-      this.oneg += parseFloat(qtde);
+    switch (tpSangue) {
+      case "A+":
+        this.apos += parseFloat(qtde);
+        break;
+      case "A-":
+        this.aneg += parseFloat(qtde);
+        break;
+      case "B+":
+        this.bpos += parseFloat(qtde);
+        break;
+      case "B-":
+        this.bneg += parseFloat(qtde);
+        break;
+      case "AB+":
+        this.abpos += parseFloat(qtde);
+        break;
+      case "AB-":
+        this.abneg += parseFloat(qtde);
+        break;
+      case "O+":
+        this.opos += parseFloat(qtde);
+        break;
+      case "O-":
+        this.oneg += parseFloat(qtde);
+        break;
+      default:
+        break;
     }
 
   }

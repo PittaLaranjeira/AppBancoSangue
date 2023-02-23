@@ -12,14 +12,22 @@
     <br><br><br>
     <ion-item>
       <ion-label>Tipo Sanguíneo: </ion-label>
-      <ion-input name="tpSangue" ngModel></ion-input>
+      <select name="tpSangue" id="tpSangue" ngModel>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
       <br>
-      <ion-label>Quantidade: </ion-label>
+      <ion-label class="ion-padding">Quantidade: </ion-label>
       <ion-input name="qtde" ngModel></ion-input>
       <p>ml</p>
     </ion-item><br><br>
     <br>
-
     <ion-button (click)="doar(formulario)">DOAR</ion-button>
     <!--<ion-button (click)="estoque(formulario)">Análise Estoque</ion-button>-->
   </form>
